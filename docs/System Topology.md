@@ -10,24 +10,24 @@
 
 ```
                          ┌─────────────────────────────────────────┐
-                         │              INTERNET / CDN              │
+                         │              INTERNET / CDN             │
                          └─────────────────────────────────────────┘
                                           │
                                           │ HTTPS / WSS
                                           ▼
                          ┌─────────────────────────────────────────┐
-                         │         EDGE (Reverse Proxy / LB)        │
-                         │  • TLS termination                       │
-                         │  • Rate limiting                         │
-                         │  • WebSocket upgrade                     │
+                         │         EDGE (Reverse Proxy / LB)       │
+                         │  • TLS termination                      │
+                         │  • Rate limiting                        │
+                         │  • WebSocket upgrade                    │
                          └─────────────────────────────────────────┘
                                           │
                     ┌─────────────────────┼─────────────────────┐
                     │                     │                     │
                     ▼                     ▼                     ▼
          ┌──────────────────┐  ┌──────────────────┐  ┌──────────────────┐
-         │  Signaling Pod 1  │  │  Signaling Pod 2  │  │  Auth Pod        │
-         │  :8080            │  │  :8080            │  │  :8081           │
+         │  Signaling Pod 1 │  │  Signaling Pod 2 │  │  Auth Pod        │
+         │  :8080           │  │  :8080           │  │  :8081           │
          └──────────────────┘  └──────────────────┘  └──────────────────┘
                     │                     │                     │
                     └─────────────────────┼─────────────────────┘
@@ -35,8 +35,8 @@
                                           │ TCP 6379
                                           ▼
                          ┌─────────────────────────────────────────┐
-                         │         Redis (Primary + Replica)        │
-                         │  • Session keys  • Offer/Answer cache    │
+                         │         Redis (Primary + Replica)       │
+                         │  • Session keys  • Offer/Answer cache   │
                          └─────────────────────────────────────────┘
 ```
 
