@@ -110,7 +110,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Production Considerations
 
-1. **TLS** — Use a reverse proxy (nginx, Caddy) for TLS termination
+1. **TLS** — Use a reverse proxy (nginx, Caddy), or Cloud provider's loadbalancer for TLS termination
 2. **Secrets** — Store `AUTH_SECRET` in a secrets manager
 3. **Redis** — Use Redis Sentinel or Cluster for HA
 4. **Scaling** — Run multiple Signaling pods; use sticky sessions for WebSocket affinity
