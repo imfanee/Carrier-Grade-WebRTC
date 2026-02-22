@@ -1,0 +1,20 @@
+# golangci-lint configuration for Carrier-Grade WebRTC backend.
+# By:- Faisal Hanif | imfanee@gmail.com
+
+run:
+  timeout: 2m
+  modules-download-mode: readonly
+
+linters:
+  enable:
+    - errcheck
+    - gofmt
+    - govet
+    - ineffassign
+    - staticcheck
+    - unused
+
+linters-settings:
+  errcheck:
+    check-type-assertions: true
+    check-blank: true
