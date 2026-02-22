@@ -78,4 +78,4 @@ MIT License — See [LICENSE](LICENSE) for details.
 
 ---
 
-*By:- Faisal Hanif | imfanee@gmail.com*
+*By:- Faisal Hanif | imfanee@gmail.com | https://www.linkedin.com/in/faisal-hanif-ai-telecom/*
