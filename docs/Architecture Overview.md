@@ -17,37 +17,37 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                           CLIENT LAYER                                       │
-│  ┌─────────────────────────────────────────────────────────────────────┐   │
-│  │  NextJS PWA Client                                                    │   │
-│  │  • WebRTC PeerConnection  • WebSocket Signaling  • Media Capture    │   │
-│  └─────────────────────────────────────────────────────────────────────┘   │
+│                           CLIENT LAYER                                      │
+│  ┌─────────────────────────────────────────────────────────────────────┐    │
+│  │  NextJS PWA Client                                                  │    │
+│  │  • WebRTC PeerConnection  • WebSocket Signaling  • Media Capture    │    │
+│  └─────────────────────────────────────────────────────────────────────┘    │
 └─────────────────────────────────────────────────────────────────────────────┘
                                       │
                                       │ HTTPS / WSS
                                       ▼
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                           EDGE / GATEWAY LAYER                               │
+│                           EDGE / GATEWAY LAYER                              │
 │  (Reverse Proxy / Load Balancer — TLS termination, rate limiting)           │
 └─────────────────────────────────────────────────────────────────────────────┘
                                       │
                     ┌─────────────────┼─────────────────┐
                     ▼                 ▼                 ▼
 ┌──────────────────────────┐ ┌──────────────────┐ ┌──────────────────────────┐
-│   SIGNALING SERVICE      │ │   AUTH SERVICE    │ │   HEALTH AGGREGATOR       │
-│   • WebSocket handlers   │ │   • Token verify  │ │   • /health/live          │
-│   • SDP relay            │ │   • Session check │ │   • /health/ready         │
-│   • ICE candidate relay  │ │   • JWT validation│ │   • Dependency probes     │
+│   SIGNALING SERVICE      │ │   AUTH SERVICE    │ │   HEALTH AGGREGATOR     │
+│   • WebSocket handlers   │ │   • Token verify  │ │   • /health/live        │
+│   • SDP relay            │ │   • Session check │ │   • /health/ready       │
+│   • ICE candidate relay  │ │   • JWT validation│ │   • Dependency probes   │
 └──────────────────────────┘ └──────────────────┘ └──────────────────────────┘
                     │                 │
                     └────────┬────────┘
                              ▼
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                           DATA LAYER                                         │
-│  ┌─────────────────────────────────────────────────────────────────────┐   │
-│  │  Redis                                                                │   │
-│  │  • Session store  • Offer/Answer cache  • TTL-based expiry           │   │
-│  └─────────────────────────────────────────────────────────────────────┘   │
+│                           DATA LAYER                                        │
+│  ┌─────────────────────────────────────────────────────────────────────┐    │
+│  │  Redis                                                              │    │
+│  │  • Session store  • Offer/Answer cache  • TTL-based expiry          │    │
+│  └─────────────────────────────────────────────────────────────────────┘    │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -77,3 +77,4 @@
 ---
 
 *By:- Faisal Hanif | imfanee@gmail.com*
+ 
